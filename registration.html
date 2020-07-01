@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>REGISTRATION PAGE</title>
+      <style>
+                  ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         background-color: #333;
+         }
+         li {
+         float: left;
+         }
+         li a {
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         }
+         li a:hover {
+         background-color: #111;
+         }
+      </style>
+   </head>
+   <body>
+      <a href="https://www.iiit.ac.in/">
+      <img src="https://www.iiit.ac.in/img/iiit-new.png" style="float:left;width:95px;height:65px;">
+      </a>
+      <a href="https://serc.iiit.ac.in/rdip" style="float:right;">
+         <h2>RDIP</h2>
+      </a>
+      <br><br><br><br>
+      <ul>
+         <li><a class="active" href=homepage.html>Home</a></li>
+         <li><a href=registration.html>Registration Form</a></li>
+      </ul>
+      <br>
+      <form action="details.html">
+         <label>&emsp;Full Name:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</label>       
+         <input type="text" name="Name" size="15"/ required> <br> <br>
+         <label>&emsp;Email:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>  
+         <input type="email" id="email" name="email" size="15"/ required> <br><br>
+         </label>&emsp;Phone No:&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;</label>
+         <input type="text" name="Phone" size="15"/ required> <br> <br>
+         <label>&emsp;Gender:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label> 
+         <input type="radio" name="gender" required/> Male   
+         <input type="radio" name="gender"/> Female   
+         <input type="radio" name="gender"/> Other  
+         <br><br>
+         <label>Reason for RDIP:&emsp;&nbsp;&emsp;&emsp;</label> 
+         <input type="checkbox" name="course" required/> HTML   
+         <input type="checkbox" name="course"/> CSS   
+         <input type="checkbox" name="course"/> JavaScript  
+         <br><br>
+         </label>&emsp;College:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
+         <input type="text" name="Phone" size="15"/ required> <br> <br>&emsp;&emsp;
+         <input type="checkbox" name="declare" required/>&emsp;&emsp;&emsp; I declare above details given by me are true<br><br>&emsp;
+         <input type="submit" value="Submit">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+         <input type="reset" value="Reset">
+         <label>
+      </form>
+   </body>
+</html>
