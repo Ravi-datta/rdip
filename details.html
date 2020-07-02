@@ -3,7 +3,7 @@
    <head>
       <title>DETAILS PAGE</title>
       <style>
-                  ul {
+         ul {
          list-style-type: none;
          margin: 0;
          padding: 0;
@@ -24,6 +24,9 @@
          background-color: #111;
          }
       </style>
+      <script type="text/javascript">
+         document.getElementById("write").innerHTML = window.location.search;
+      </script>
    </head>
    <body>
       <a href="https://www.iiit.ac.in/">
@@ -39,12 +42,30 @@
       </ul>
       <br>
       <pre style="font-size: 15px;text-align: left;">
-         First Name : John<br>
-         E-mail     : xyz@avc.com<br>
-         Phone No   : 9********5<br>
-         Gender     : Male<br>
-         Reason     : HTML, CSS, Java Script<br>
-         College    : Name of College<br>
+         First Name : <b id="name"></b>
+         E-mail     : <b id="email"></b>
+         Phone No   : <b id="phone"></b>
+         Gender     : <b id="gender"></b>
+         Reason     : <b id="course"></b>
+         College    : <b id="college"></b>
       </pre>
+      <script>
+         const queryString = window.location.search;
+         console.log(queryString)
+         const urlParams = new URLSearchParams(queryString);
+         const name=urlParams.get('Name')
+         const email=urlParams.get('email')
+         const phone=urlParams.get('Phone')  
+         const gender=urlParams.get('gender')
+         const course=urlParams.getAll('course')
+         const college=urlParams.get('college')
+         document.getElementById("name").innerHTML = name;
+         document.getElementById("email").innerHTML = email;
+         document.getElementById("phone").innerHTML = phone;
+         document.getElementById("gender").innerHTML = gender;
+         document.getElementById("course").innerHTML = course;
+         document.getElementById("college").innerHTML = college;
+         console.log(email);
+      </script>
    </body>
 </html>

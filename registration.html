@@ -3,7 +3,7 @@
    <head>
       <title>REGISTRATION PAGE</title>
       <style>
-                  ul {
+         ul {
          list-style-type: none;
          margin: 0;
          padding: 0;
@@ -38,7 +38,7 @@
          <li><a href=registration.html>Registration Form</a></li>
       </ul>
       <br>
-      <form action="details.html">
+      <form action="details.html" method="GET">
          <label>&emsp;Full Name:&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;</label>       
          <input type="text" name="Name" size="15"/ required> <br> <br>
          <label>&emsp;Email:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>  
@@ -46,17 +46,17 @@
          </label>&emsp;Phone No:&emsp;&ensp;&emsp;&emsp;&emsp;&emsp;</label>
          <input type="text" name="Phone" size="15"/ required> <br> <br>
          <label>&emsp;Gender:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label> 
-         <input type="radio" name="gender" required/> Male   
-         <input type="radio" name="gender"/> Female   
-         <input type="radio" name="gender"/> Other  
+         <input type="radio" name="gender" value="Male" required> Male   
+         <input type="radio" name="gender" value="Female"> Female   
+         <input type="radio" name="gender" value="Other"> Other  
          <br><br>
          <label>Reason for RDIP:&emsp;&nbsp;&emsp;&emsp;</label> 
-         <input type="checkbox" name="course" required/> HTML   
-         <input type="checkbox" name="course"/> CSS   
-         <input type="checkbox" name="course"/> JavaScript  
+         <input type="checkbox" name="course" value="Html" required> HTML   
+         <input type="checkbox" name="course" value="Css"> CSS   
+         <input type="checkbox" name="course" value="Java Script"> JavaScript  
          <br><br>
          </label>&emsp;College:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</label>
-         <input type="text" name="Phone" size="15"/ required> <br> <br>&emsp;&emsp;
+         <input type="text" name="college" size="15" required> <br> <br>&emsp;&emsp;
          <input type="checkbox" name="declare" required/>&emsp;&emsp;&emsp; I declare above details given by me are true<br><br>&emsp;
          <input type="submit" value="Submit">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
          <input type="reset" value="Reset">
