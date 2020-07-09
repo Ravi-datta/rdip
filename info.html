@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>DETAILS PAGE</title>
+      <style>
+         ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         background-color: #333;
+         }
+         li {
+         float: left;
+         }
+         li a {
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         }
+         li a:hover {
+         background-color: #111;
+         }
+      </style>
+      <script type="text/javascript">
+         document.getElementById("write").innerHTML = window.location.search;
+      </script>
+   </head>
+   <body>
+      <h2>Details</h2>
+      <br>
+      <pre style="font-size: 15px;text-align: left;">
+         First Name            : <b id="name"></b>
+         Phone No              : <b id="phone"></b>
+         Choice                : <b id="choice"></b>
+         Subject Interests     : <b id="course"></b>
+      </pre>
+      <script>
+         const queryString = window.location.search;
+         console.log(queryString)
+         const urlParams = new URLSearchParams(queryString);
+         const name=urlParams.get('Name')
+         const phone=urlParams.get('Phone')  
+         const choice=urlParams.get('choice')
+         const course=urlParams.getAll('course')
+         document.getElementById("name").innerHTML = name;
+         document.getElementById("phone").innerHTML = phone;
+         document.getElementById("choice").innerHTML = choice;
+         document.getElementById("course").innerHTML = course;
+         console.log(email);
+      </script>
+   </body>
+</html>

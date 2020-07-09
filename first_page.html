@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Ravi Datta Rachuri</title>
+      <style>
+         ul {
+         list-style-type: none;
+         margin: 0;
+         padding: 0;
+         overflow: hidden;
+         background-color: #333;
+         }
+         li {
+         float: left;
+         }
+         li a {
+         display: block;
+         color: white;
+         text-align: center;
+         padding: 14px 16px;
+         text-decoration: none;
+         }
+         li a:hover {
+         background-color: #111;
+         }/* commenting the below lines for navigation bar */
+         img {
+         /*float: left;
+         position: absolute;
+         left: 0px; 
+         top: 0px;
+         z-index: -1; */
+         }
+         .intro {
+         background-color: powderblue;
+         color:black;
+         }
+         th{
+         color:black;
+         }
+         #top{
+         color: blue;
+         }
+         /*
+         p#down{
+         visibility: hidden;
+         } */
+         table {outline-color:red;
+         outline-style: outset;
+         outline-width: thick;
+         }
+         table {
+         font-family: arial, sans-serif;
+         border-collapse: collapse;
+         width: 100%;
+         }
+         td, th {
+         border: 1px solid black;
+         padding: 8px;
+         }
+         td.sub{
+         text-align: left;
+         }
+         td.mar{
+         text-align: right;
+         }
+         tr:nth-child(even) {background-color: lightgray;}
+      </style>
+   </head>
+   <body>
+      <ul>
+         <li><a class="active" href=first_page.html>Home</a></li>
+         <li><a href=Registration_form.html>Registration</a></li>
+         <li><a href=first_page.html>Personal Details</a></li>
+      </ul>
+      <p id="down" style="text-align:center;font-size:35px;border: 1px black;padding: 2px 2px 2px 2px;">
+         My Details
+      </p>
+      <br><br><br><br><br>
+      <!--  <p>There is a hidden element above this statement</p>-->
+      <img src="my_picture.jpeg" alt="my picture" style="border:4px solid orange;float:right;width:200px;height:175px;"><br><br>
+      <h1>Name: Ravi Datta Rachuri</h1>
+      <h2>College: CMR College of Engineering and Technology</h2>
+      <h2>Stream:<a href="list_of_courses_attended.html"> Electronics and Communication Engineeing</a></h2>
+      <br><br><br>
+      <table id="top" style="display: none;">
+         <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+         </tr>
+         <tr>
+            <td class="sub">Microprocessors & Microcontrollers</td>
+            <td class="mar">87</td>
+         </tr>
+         <tr>
+            <td class="sub">Antennas & Wave Propagation</td>
+            <td class="mar">95</td>
+         </tr>
+         <tr>
+            <td class="sub">Digital Communications</td>
+            <td class="mar">75</td>
+         </tr>
+         <tr>
+            <td class="sub">Linear & Digital IC Applications</td>
+            <td class="mar">90</td>
+         </tr>
+         <tr>
+            <td class="sub">Digital Design Using Verilog HDL</td>
+            <td class="mar">92</td>
+         </tr>
+      </table>
+      <span id="val"></span>
+        
+        <script>
+         function add(){
+            
+            var table = document.getElementById("top"), avgVal, sumVal = 0, 
+                        rowCount = table.rows.length - 1;
+            for(var i = 1; i < table.rows.length; i++)
+            {
+                sumVal = sumVal + parseInt(table.rows[i].cells[1].innerHTML);
+            }
+            return sumVal;
+         }
+         function avg(){
+            
+            avgVal=(add() / 5);
+            return avgVal;
+         }
+            
+        </script>
+
+      <table id="top">
+         <caption class="intro">
+            <h4>Previous Semester Result</h4>
+         </caption>
+         <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+         </tr>
+         <tr>
+            <td class="sub">Microprocessors & Microcontrollers</td>
+            <td class="mar">87</td>
+         </tr>
+         <tr>
+            <td class="sub">Antennas & Wave Propagation</td>
+            <td class="mar">95</td>
+         </tr>
+         <tr>
+            <td class="sub">Digital Communications</td>
+            <td class="mar">75</td>
+         </tr>
+         <tr>
+            <td class="sub">Linear & Digital IC Applications</td>
+            <td class="mar">90</td>
+         </tr>
+         <tr>
+            <td class="sub">Digital Design Using Verilog HDL</td>
+            <td class="mar">92</td>
+         </tr>
+         <tr>
+            <td class="sub">Total</td>
+            <td class="mar"><script type = "text/javascript">document.write(add());</script></td>
+         </tr>
+         <tr>
+            <td class="sub">Average</td>
+            <td class="mar"><script type = "text/javascript">document.write(avg());</script></td>
+      </table>
+
+   </body>
+</html>

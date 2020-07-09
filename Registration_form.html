@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <script type="text/javascript">
+         function validate(){
+         var Phone=document.myform.Phone.value;
+         if (isNaN(Phone)){
+           alert("Phone Number should contain only numeric values");
+           return false;
+         }else{
+           return true;
+           }
+         }
+        function allLetter()
+  { 
+  var uname = document.myform.Name;
+  var letters = /^[A-Za-z]+$/;
+  if(uname.value.match(letters))
+  {
+  return true;
+  }
+  else
+  {
+  alert('Name must have alphabet characters only');
+  return false;
+  }
+  }
+      </script>
+      <style>
+         /* unvisited link */
+         a:link {
+         background-color: lightgray;
+         color: black;
+         border: 1px solid black;
+         padding: 10px 20px;
+         text-align: center;
+         text-decoration: none;
+         display: inline-block;
+         }
+         /* visited link */
+         a:visited {
+         color: gold;
+         }
+         /* mouse over link */
+         a:hover {
+         color: hotpink;
+         }
+         /* selected link */
+         a:active {
+         color: blue;
+         }
+      </style>
+   </head>
+   <body style="background-color:lightgreen;">
+      <h2>Course Registration Form</h2>
+      <form name="myform" action="info.html" onsubmit="return validate()" method="GET">
+         <label>&emsp;Full Name:&emsp;&emsp;&emsp;&nbsp;</label>       
+         <input type="text" name="Name" size="15" onblur="allLetter()"/ required> <br> <br>
+         </label>&emsp;Phone No:&emsp;&ensp;&emsp;&emsp;</label>
+         <input type="text" name="Phone" size="15"/ required> <br> <br>
+         Course :
+         </label><br>
+         <input type="radio" name="choice"/ value="Bachelors"> Bachelors <br>
+         <input type="radio" name="choice"/ value="Masters"> Masters <br>
+         <br>
+         <label>Subject Interests:&emsp;&nbsp;&emsp;&emsp;</label> 
+         <input type="checkbox" name="course" value="Course 1" required> Course 1   
+         <input type="checkbox" name="course" value="Course 2"> Course 2   
+         <input type="checkbox" name="course" value="Course 3"> Course 3  
+         <br><br>
+         Description:
+         <br>
+         <textarea cols="80" rows="5" value="address">  
+         </textarea>  
+         <br> <br> 
+         <input type="submit" value="Submit">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+         <label>
+      </form>
+   </body>
+</html>
