@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>About HTML</h2>
+    <p>
+      HTML is the standard markup language for documents designed to be
+      displayed in a web browser. It can be assisted by technologies such as
+      Cascading Style Sheets (CSS) and scripting languages like JavaScript
+    </p>
+    <p>word at fifth,seventh and tenth are:</p>
+    <p id="five"></p>
+    <p id="seven"></p>
+    <p id="ten"></p>
+    <script>
+      var str =
+        "HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages like JavaScript";
+      var five = str.slice(20, 27);
+      document.getElementById("five").innerHTML = five;
+      var seven = str.slice(36, 40);
+      document.getElementById("seven").innerHTML = seven;
+      var ten = str.slice(60, 62);
+      document.getElementById("ten").innerHTML = ten;
+    </script>
+  </body>
+</html>

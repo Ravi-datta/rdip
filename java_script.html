@@ -1,15 +1,60 @@
 <!DOCTYPE html>
 <html>
-<body>
+<body onload="myFunction()">
 	<p id="demo"></p>
 	<script language="javascript" type="text/javascript">
+	    var x = 17,message;
+	    message = document.getElementById("demo");
+        message.innerHTML = "";
+		function fib(n) {
+
+  const result = [0, 1];
+  for (var i = 2; i <= n; i++) {
+    const a = (i - 1);
+    const b = (i - 2);
+    result.push(a + b);
+  }
+  console.log(result);
+  return result[n];
+
+}
+
+  try { 
+    if(x == "")  throw "empty";
+    if(isNaN(x)) throw "not a number";
+    x = fib(x);
+    if(x < 5)  throw "too low";
+    if(x > 10)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+/*
+switch (true) {
+    case (x < 10):
+        alert("number is out of range");
+        break;
+    case (x >= 10 && x < 100):
+        fib(x);
+        break;
+    default:
+        alert("none");
+        break;
+} */
+		function myFunction() {
+  alert("Page is loaded");
+}
 		var arr = [1,2,3,4,5];
 		var a=arr[3];
 		var a=String(a);
 		var r=Math.random();
+		var d = new Date();
 		document.getElementById("demo").innerHTML = 
 		"JavaScript was initially created to make web pages alive.The programs in this language are called scripts. They can be written right in a web page’s HTML and run automatically as the page loads.Scripts are provided and executed as plain text. They don’t need special preparation or compilation to run.In this aspect, JavaScript is very different from another language called Java." + "<br><br>"+"changed the element at index 3 of the array to string"+"<br>"+"Type of element at index 3 is :" + typeof(a)+ "<br><br>"+"Power of (8,2):" + Math.pow(8,2)+ "<br><br>"+"Square Root of 64:"+ Math.sqrt(64)+ "<br><br>"+"Absolute value:"+Math.abs(-4.4)+"<br><br>"+"Random value:"+r+"<br><br>"+"Ceil value:"+Math.ceil(r)+"<br><br>"+"Rounded value:"+Math.round(r)+"<br><br>"+"Floor value:"+Math.floor(r)+"<br><br>"+"Sine value:"+Math.sin(90 * r / 180)+"<br><br>";
+		console.log(d);
+
 
 	</script>
+	<button onclick="this.innerHTML=Date()">Click here to view time</button>
 </body>
 </html>
