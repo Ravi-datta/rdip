@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .divClass1
+{
+    padding:5px;
+    text-align:center;
+    background-color:yellow;
+    border:solid 1px;
+}
+.divClass2
+{
+    padding:5px;
+    text-align:center;
+    background-color:grey;
+    border:solid 1px;
+}
+body,input {
+    font-family: Helvetica, Arial;
+}
+
+#fade, #fadeTo {
+    width: 150px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid black;
+    background-color: yellow;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+  $("div").dblclick(function(){
+    $( this ).toggleClass("divClass2");
+  });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $("p").toggle();
+  });
+});
+    function fadeToggle(div_id, button) {
+
+        if (button.value == 'Fade Out') {
+            $('#' + div_id).fadeOut('slow');
+            button.value = 'Fade In';
+        } else {
+            $('#' + div_id).fadeIn(2000);
+            button.value = 'Fade Out';
+        }
+    }
+
+    function fadeToToggle(div_id, button) {
+
+        if (button.value == 'FadeTo 50%') {
+            $('#' + div_id).fadeTo('slow' , 0.5);
+            button.value = 'FadeTo 100%';
+        } else {
+            $('#' + div_id).fadeTo(4000 , 1.0);
+            button.value = 'FadeTo 50%';
+        }
+    }
+</script>
+</head>
+<body>
+    <input type="button" value="Fade Out" onclick="fadeToggle('fade', this)" />
+    <br><br>
+
+    <div id="fade">Demo Text in div for fadeIn, fadeOut example</div>
+    <br>
+
+    <input type="button" value="FadeTo 50%" onclick="fadeToToggle('fadeTo', this)" />
+    <div id="fadeTo">Demo Text in div for fadeTo example</div>
+    <br><br>
+    <div class="divClass1">Doubleclick here</div>
+    <br><br>
+
+
+<button>Toggle between hiding and showing the paragraphs</button>
+
+<p>Hey there.... STAY HOME STAY SAFE!!!</p>
+
+
+</body>
+</html>
