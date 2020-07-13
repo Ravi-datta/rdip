@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+
+        <title>Calculator</title>
+
+        <link rel="stylesheet" type="text/css" href="task1.css">
+
+        <script src="alltasks.js"></script>
+
+    </head>
+
+    <body onLoad = "return Clear()">
+
+        <div class="container">
+            <h1>Calculator</h1>
+
+            <div class="caltable">
+                <table>
+                    <tr>
+                        <td colspan="4"><input type="text" id="textfield"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="+" onclick="DisplayOperator('+')" value="+">+</button>
+                        </td>
+                        <td>
+                            <button id="-" onclick="DisplayOperator('-')" value="-">-</button>
+                        </td>
+                        <td>
+                            <button id="*" onclick="DisplayOperator('*')" value="*">*</button>
+                        </td>
+                        <td>
+                            <button id="C" style="color: red;" onclick="Clear()">C</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="7" onclick="DisplayNum('7')" value="7">7</button>
+                        </td>
+                        <td>
+                            <button id="8" onclick="DisplayNum('8')" value="8">8</button>
+                        </td>
+                        <td>
+                            <button id="9" onclick="DisplayNum('9')" value="9">9</button>
+                        </td>
+                        <td>
+                            <button id="/" onclick="DisplayOperator('/')" value="/">/</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="4" onclick="DisplayNum('4')" value="4">4</button>
+                        </td>
+                        <td>
+                            <button id="5" onclick="DisplayNum('5')" value="5">5</button>
+                        </td>
+                        <td>
+                            <button id="6" onclick="DisplayNum('6')" value="6">6</button>
+                        </td>
+                        <td>
+                            <button id="%" onclick="DisplayOperator('%')" value="%">%</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <button id="1" onclick="DisplayNum('1')" value="1">1</button>
+                        </td>
+                        <td>
+                            <button id="2" onclick="DisplayNum('2')" value="2">2</button>
+                        </td>
+                        <td>
+                            <button id="3" onclick="DisplayNum('3')" value="3">3</button>
+                        </td>
+                        <td>
+                            <button id="absolute" onclick="DisplayOperator(' mod ')" value="mod">|x|</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=2>
+                            <button id="0" onclick="DisplayNum('0')" value="0">0</button>
+                        </td>
+                        <td>
+                            <button id="." onclick="DisplayDec()" value=".">.</button>
+                        </td>
+                        <td>
+                            <button id="sqroot" onclick="DisplayOperator(' sqrt ')" value="sqrt">&radic;x</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan=4>
+                            <button id="=" onclick="solve()">=</button>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+
+</html>

@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    align-content: center;
+    padding-top: 100px;
+    background-color: lightcoral;
+    
+}
+
+label {
+    color: #2a3638;
+    background-color: #5CF32E;
+}
+button {
+    color: #2a3638;
+    background-color: yellow;
+}
